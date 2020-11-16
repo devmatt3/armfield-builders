@@ -6,7 +6,7 @@ import {
   Switch,
 } from 'react-router-dom'
 import { apiEndpoint } from './prismic-configuration'
-import { Home, NotFound } from './pages'
+import { NotFound, Maintenance } from './pages'
 
 /**
  * Main application componenet
@@ -22,7 +22,7 @@ const App = (props) => {
       </Helmet>
       <BrowserRouter>
         <Switch>
-          <Route exact to="/" component={Home} />
+          <Route exact to="/" component={Maintenance} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

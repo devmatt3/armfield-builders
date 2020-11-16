@@ -1,0 +1,40 @@
+@import "./Variables.scss";
+@import "./Functions.scss";
+
+.MaintenanceWrapper {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: mob(10px);
+    min-width: 375px;
+}
+
+.MaintenanceCopy {
+    span {
+        font-size: mob(12px);
+        font-family: $SG-B;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+@media #{$mq-medium} {
+    .MaintenanceWrapper {
+        line-height: 150%;
+        font-size: des(36px);
+    }
+
+    .MaintenanceCopy {
+        span {
+            font-size: des(42px);
+        }
+    }
+}
+
+@media #{$mq-large} {
+}
+
+@media #{$mq-largest} {
+}

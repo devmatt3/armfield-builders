@@ -1,0 +1,20 @@
+/***************
+ ** Functions **
+ ***************/
+
+ @function mob($target) {
+    $vw-context: (375 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  }
+
+  @function tab($target) {
+    $vw-context: (1024 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  }
+  
+  @function des($target) {
+    $vw-context: (1920 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+  }
+  
+ 

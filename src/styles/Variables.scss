@@ -1,0 +1,45 @@
+$darkGray: #000000;
+$slateGray: #708090;
+
+@font-face {
+    font-family: 'SpaceGrotesk Bold';
+    src: url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk Light';
+    src: url('../fonts/SpaceGrotesk-Light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk Medium';
+    src: url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk Regular';
+    src: url('../fonts/SpaceGrotesk-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk SemiBold';
+    src: url('../fonts/SpaceGrotesk-SemiBold.ttf') format('truetype'),
+}
+
+$SG-B: 'SpaceGrotesk Bold', sans-serif;
+$SG-L: 'SpaceGrotesk Light', sans-serif;
+$SG-M: 'SpaceGrotesk Medium', sans-serif;
+$SG-R: 'SpaceGrotesk Regular', sans-serif;
+$SG-SB: 'SpaceGrotesk SemiBold', sans-serif;
+
+/*******************
+ ** Media Queries **
+ *******************/
+
+ $mq-screen: "screen";
+ $mq-medium: "screen and (min-width: 768px)";
+ $mq-large: "screen and (min-width: 1024px)";
+ $mq-xlarge: "screen and (min-width: 1280px)";
+ $mq-largest: "screen and (min-width: 1920px)";
+
+
