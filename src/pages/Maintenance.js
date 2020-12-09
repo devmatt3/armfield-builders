@@ -1,19 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { RichText } from 'prismic-reactjs';
+import * as actions from '../redux/actions/actions';
+import { queryMaintenanceContent } from '../utils/prismicQueries';
 import styles from '../styles/Maintenance.module.scss';
 
-const Home = () => {
-    return (
-        <div className={styles.MaintenanceWrapper}>
-            <div className={styles.MaintenanceBackground}></div>
-            <div className={styles.MaintenanceCopyWrap}>
-                <h4>
-                    Just like our homes, the site is currently <span>under construction</span>.
-                </h4>
-                <h4>Check back later to see the progress!</h4>
-                <h5>- Armfield Builders</h5>
+const Maintenance = (props) => {
+    const [maintenanceDoc, setMaintenanceDoc] = useState(null);
+
+    const { setIsMaintenanceShown } = props;
+
+    useEffect(() => {
+        const fetchMaintenanceContent = async () => {
+            const queryResponse = await queryMaintenanceContent();
+            const maintenanceDocContent = queryResponse.data.maintenance;
+            console.log(maintenanceDocContent);
+            if (maintenanceDocContent) {
+                setMaintenanceDoc(maintenanceDocContent);
+            }
+        };
+        fetchMaintenanceContent();
+        setIsMaintenanceShown(true);
+    }, [setIsMaintenanceShown]);
+
+    if (maintenanceDoc) {
+        return (
+            <div className={styles.MaintenanceWrapper}>
+                <div className={styles.MaintenanceBackground}></div>
+                <div className={styles.MaintenanceCopyWrap}>
+                    {RichText.render(maintenanceDoc.maintenance_copy)}
+                </div>
             </div>
-        </div>
-    )
+        );
+    }
+    return null;
 }
 
-export default Home;
+const mapDispatchToProps = dispatch => {
+    return {
+        setIsMaintenanceShown: (isShown) => dispatch(actions.setIsMaintenanceShown(isShown))
+    };
+};
+
+export default connect(null, mapDispatchToProps)(Maintenance);
