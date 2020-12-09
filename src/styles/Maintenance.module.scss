@@ -2,13 +2,13 @@
 
 .MaintenanceWrapper {
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
     min-width: 375px;
 }
 
 .MaintenanceBackground {
     width: 100vw;
-    height: 70vh;
+    height: 65vh;
     background-image: url("../assets/images/blueprint.svg");
     background-repeat: no-repeat;
     background-size: cover;
