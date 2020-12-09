@@ -1,39 +1,64 @@
-@import "./Variables.scss";
-@import "./Functions.scss";
+@import "./base/Base.module.scss";
 
 .MaintenanceWrapper {
-    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    min-width: 375px;
+}
+
+.MaintenanceBackground {
+    width: 100vw;
+    height: 70vh;
+    background-image: url("../assets/images/blueprint.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.MaintenanceCopyWrap {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    font-size: mob(10px);
-    min-width: 375px;
-}
+    height: 30vh;
 
-.MaintenanceCopy {
-    span {
-        font-size: mob(12px);
-        font-family: $SG-B;
-        text-transform: uppercase;
-        text-decoration: underline;
+    h4 {
+        margin-bottom: 3vw;
+        text-align: center;
+        span {
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    }
+
+    h5 {
+        margin-top: 2vw;
     }
 }
 
 @media #{$mq-medium} {
-    .MaintenanceWrapper {
-        line-height: 150%;
-        font-size: des(36px);
-    }
-
-    .MaintenanceCopy {
-        span {
-            font-size: des(42px);
-        }
-    }
 }
 
 @media #{$mq-large} {
+    .MaintenanceWrapper {
+        flex-flow: row;
+    }
+
+    .MaintenanceBackground {
+        width: 80%;
+        height: 100vh;
+    }
+
+    .MaintenanceCopyWrap {
+        height: 100vh;
+
+        h4 {
+            margin-bottom: 1.5vw;
+        }
+
+        h5 {
+            margin-top: 2vw;
+        }
+    }
 }
 
 @media #{$mq-largest} {

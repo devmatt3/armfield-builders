@@ -1,0 +1,21 @@
+@import "./styles/base/Base.module.scss";
+
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $offWhite;
+  color: $slateGray;
+  font-family: $SG;
+}
+
+@media #{$mq-medium}, print {
+}
+
+@media #{$mq-large} {
+}
+
+@media #{$mq-largest} {
+}

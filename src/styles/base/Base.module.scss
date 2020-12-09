@@ -1,0 +1,98 @@
+@import './Setup.module.scss';
+
+h1 {
+    font-size: mob(18px);
+}
+
+h2 {
+    font-size: mob(16px);
+}
+
+h3 {
+    font-size: mob(14px);
+}
+
+h4 {
+    font-size: mob(10px);
+}
+
+h5 {
+    font-size: mob(9px);
+}
+
+p{
+    font-size: mob(8px);
+}
+
+span {
+    font-size: mob(10px);
+    font-family: $SG;
+    font-weight: 700;
+}
+
+@media #{$mq-medium}, print {
+    h1 {
+        font-size: tab(48px);
+    }
+    
+    h2 {
+        font-size: tab(32px);
+    }
+    
+    h3 {
+        font-size: tab(28px);
+    }
+    
+    h4 {
+        font-size: tab(24px);
+    }
+    
+    h5 {
+        font-size: tab(18px);
+    }
+    
+    p{
+        font-size: tab(16px);
+    }
+    
+    span {
+        font-size: tab(26px);
+    }
+}
+
+@media #{$mq-large} {
+
+    h1 {
+        font-size: des(48px);
+    }
+    
+    h2 {
+        font-size: des(42px);
+    }
+    
+    h3 {
+        font-size: des(36px);
+    }
+    
+    h4 {
+        font-size: des(34px);
+    }
+    
+    h5 {
+        font-size: des(26px);
+    }
+    
+    p{
+        font-size: des(24px);
+    }
+    
+    span {
+        font-size: des(36px);
+    }
+}
+
+@media #{$mq-xlarge} {
+}
+
+@media #{$mq-largest} {
+}
