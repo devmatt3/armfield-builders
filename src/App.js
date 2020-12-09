@@ -8,12 +8,16 @@ import {
 import { apiEndpoint } from './prismic-configuration'
 import { NotFound, Maintenance } from './pages'
 
+import styles from './styles/base/Base.module.scss';
+
 /**
  * Main application componenet
  */
 const App = (props) => {
   const repoNameArray = /([^/]+)\.cdn.prismic\.io\/api/.exec(apiEndpoint)
   const repoName = repoNameArray[1]
+
+  document.body.classList.add(styles.BodyFreeze);
 
   return (
     <Fragment>
